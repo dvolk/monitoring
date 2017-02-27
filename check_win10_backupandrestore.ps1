@@ -1,10 +1,3 @@
-
-*** add to nsclient.ini:
-
-check_win10backupandrestore=cmd /c echo scripts/check_win10backupandrestore.ps1; exit($lastexitcode) | powershell.exe -command -
-
-*** save as scripts/check_win10backupandrestore.ps1
-
 # days to look back at:
 $days = 1
 # backups expected to occur in the last $days:
@@ -28,7 +21,3 @@ else {
     Write-Host "OK: Found $count successful backups in the last $days days."
     exit 0
 }
-
-*** EOF
-
-Set-ExecutionPolicy Unrestricted
